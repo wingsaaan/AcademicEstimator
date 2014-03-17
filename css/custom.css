@@ -1,0 +1,111 @@
+
+    th,td
+    {
+        margin: 0;
+        text-align: center;
+        border-collapse: collapse;
+        outline: 1px solid;
+		font-size: 16px;
+    }
+
+    td
+	{
+        padding: 5px 10px;
+			width: auto;
+    }
+
+    th
+	{
+
+        padding: 5px 10px;
+    }
+	
+	.nav > li > a:hover,
+	.nav > li > a:focus,
+	.nav > li > a.active
+	{
+		text-decoration: none;
+		color: #ffffff;
+	}
+
+	.nav > li > a:visited,
+	.nav > li > a:link
+	{
+		text-decoration: none;
+		color: #007044;
+	}
+	
+	.nav-pills .open .dropdown-toggle, .nav > .open.active > a:hover {
+    background-color:#007044;
+    border-color: #ffffff;
+    }
+	
+	.dropdown-menu > li > a:hover,
+	.dropdown-menu > li > a:focus {
+		text-decoration: none;
+		color: #ffffff;
+		background-color: #007044;
+	}
+	.dropdown-menu > .active > a,
+	.dropdown-menu > .active > a:hover,
+	.dropdown-menu > .active > a:focus {
+		color: #ffffff;
+		text-decoration: none;
+		outline: 0;
+		background-color: #007044;
+	}
+	.dropdown-menu > .disabled > a,
+	.dropdown-menu > .disabled > a:hover,
+	.dropdown-menu > .disabled > a:focus {
+		color: #999999;
+	}
+	
+	.btn-primary:hover,
+	.btn-primary:focus,
+	.btn-primary:active,
+	.btn-primary.active,
+	.open .dropdown-toggle.btn-primary {
+		color: #ffffff;
+		background-color: #007044;
+		border-color: #ffffff;
+	}
+	
+	.nav.nav-tabs > li.dropdown.active.open > a, 
+	.nav.nav-tabs > li.dropdown.active.open > ul.dropdown-menu a:hover,
+	.nav.nav-tabs > li.dropdown.open > a, 
+	.nav.nav-tabs > li.dropdown.open > ul.dropdown-menu a:hover
+	{
+		color: #fff;
+		background-color: #007044;
+		border-color: #fff;
+	}
+	
+	.navbar-inverse .navbar-nav > li > a:hover,
+	.navbar-inverse .navbar-nav > li > a:focus {
+		color: #ffffff;
+		background-color: #007044;
+	}
+	.navbar-inverse .navbar-nav > .active > a,
+	.navbar-inverse .navbar-nav > .active > a:hover,
+	.navbar-inverse .navbar-nav > .active > a:focus {
+		color: #ffffff;
+		background-color: #007744;
+	}
+	.navbar-inverse {
+		background-color: #007033;
+		border-color: #FFFFFF;
+	}
+	
+	.btn-primary {
+		background-color: #007033;
+		border-color: #FFFFFF;
+	}
+	
+
+	
+@media screen and (max-width: 1258px) {  
+    th,td
+    {
+		font-size: 80%;
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Schedule</title>
+
+    <!-- Bootstrap -->
+    <link rel="icon" href="img/favicon.png" type="image" sizes="16x16">
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script> 
+   function validate(evt) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode( key );
+    var regex = /[0-9]|\./;
+   if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+  } 
+</script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class ="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">AcEs</a>
+
+        </div>
+         <p class="navbar-text navbar-right">Hi Student! <a href="MAINPAGE2.html" class="navbar-link"><span class="glyphicon glyphicon-log-out"></span></a></p>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 well">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="STUDENT_MAIN.html">Home</a></li>
+            <li><a href="STUDENT_EDITINFO.html">Basic Information</a></li>
+            <li><a href="STUDENT_CHNGPW.html">Change Password</a></li>
+			<li><a href="STUDENT_LEARNING.html">Learning Style</a></li>
+            <li><a href="STUDENT_GRADES.html">Grades</a></li>
+            <li class="active"><a href="STUDENT_SCHED.html">Schedule</a></li>
+          </ul>
+
+        </div>
+        <div class="col-md-6 col-md-offset-1 well">
+
+          <h2>Schedule</h2>
+          <table width="100%" align="center" >
+    <div id="head_nav">
+    <tr>
+        <th>Time</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thrusday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+    </tr>
+</div>  
+
+    <tr>
+        <th>08:00 - 09:30</th>
+        
+            <td>ALGOCOM</td>
+            <td title="No Class" class="NoClass"></td>
+            <td>ALGOCOM</td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+        </div>
+    </tr>
+
+    <tr>
+        <th>09:40 - 11:10</td>
+        
+            <td>WEBAPPS</td>
+            <td title="No Class" class="NoClass"></td>
+            <td>WEBAPPS</td>
+            <td title="No Class" class="NoClass"></td>
+            <td>PROFSWD</td>
+            <td title="No Class" class="NoClass"></td>
+        </div>
+    </tr>
+
+    <tr>
+        <th>11:20 - 12:50</td>
+        
+            <td>STRESME</td>
+            <td title="No Class" class="NoClass"></td>
+            <td>STRESME</td>
+            <td title="No Class" class="NoClass"></td>
+            <td>PROFSWD</td>
+            <td title="No Class" class="NoClass"></td>
+
+        </div>
+    </tr>
+
+    <tr>
+        <th>01:00 - 02:30</td>
+        
+            <td>HCIFACE</td>
+            <td title="No Class" class="NoClass"></td>
+            <td>HCIFACE</td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+
+        </div>
+    </tr>
+
+    <tr>
+        <th>02:30 - 04:10</td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+
+        </div>
+    </tr>
+     <tr>
+        <th>04:20 - 05:50</td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+            <td title="No Class" class="NoClass"></td>
+
+        </div>
+    </tr>
+</table>
+            
+      </div>
+
+    </div>
+  </body>
+</html>

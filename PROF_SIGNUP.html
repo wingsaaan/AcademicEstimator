@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prof Sign-Up</title>
+
+    <!-- Bootstrap -->
+    <link rel="icon" href="img/favicon.png" type="image" sizes="16x16">
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script> 
+   function validate(evt) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode( key );
+    var regex = /[0-9]|\./;
+   if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+  } 
+</script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class ="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">AcEs</a>
+
+        </div>
+         <p class="navbar-text navbar-right">Hi Professor! <a href="MAINPAGE2.html" class="navbar-link"><span class="glyphicon glyphicon-log-out"></span></a></p>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 well">
+          <h3>Personal Information</h3>
+		  		  <div class="form-group">
+             <label for="ID Number">ID Number</label>
+             <input type="tel" class="form-control" id="IDNo" placeholder="ID Number" onkeypress='validate(event)' />
+          </div>
+          <div class="form-group">
+              <label for="LastName">Last Name</label>
+              <input type="text" class="form-control" id="LastName" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+              <label for="FirstName">First Name</label>
+              <input type="text" class="form-control" id="FirstName" placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <label for="Middle">Middle Name</label>
+              <input type="text" class="form-control" id="Middle" placeholder="Middle Name">
+            </div>
+             <div class="form-group">             
+            <label for="Position">Position</label>
+               <select id="Position" class="form-control">
+               <option></option>
+                <option>Instructor</option>
+                <option>Teaching Associate</option>
+                 <option>Assistant Professor</option>
+                <option>Associate Professor</option>
+                <option>Full Professor</option>
+          </select>
+          </div>
+
+            <div class="form-group">
+             <label for="Contact">Mobile Number</label>
+             <input type="tel" class="form-control" id="Contact" placeholder="Contact Details" onkeypress='validate(event)' />
+          </div>
+
+          <div class="form-group">             
+            <label for="Email">Email</label>
+             <input type="email" class="form-control" id="Email" placeholder="Contact Details">
+          </div>
+		  <hr>
+			<div class="form-group">
+             <label for="Password">Password</label>
+             <input type="password" class="form-control" id="pw" placeholder="Password">
+          </div>
+		  <div class="form-group">
+             <label for="Password">Confirm Password</label>
+             <input type="password" class="form-control" id="confPW" placeholder="Confirm Password">
+          </div>
+          <div class="form-group">
+          <a href = "PROF_MAIN.html"><button type="button" class="btn btn-primary">Save</button></a>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

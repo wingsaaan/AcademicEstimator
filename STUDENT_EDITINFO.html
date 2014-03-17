@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Edit Information</title>
+
+    <!-- Bootstrap -->
+    <link rel="icon" href="img/favicon.png" type="image" sizes="16x16">
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script> 
+   function validate(evt) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode( key );
+    var regex = /[0-9]|\./;
+   if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+  } 
+  
+   $('form').validate({
+        rules: {
+            nickname: {
+                required: true
+            },
+            lastname: {
+                required: true
+            }
+        },
+        highlight: function(element) {
+            $(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function(element) {
+            $(element).closest('.form-group').removeClass('has-error');
+        },
+        errorElement: 'input',
+        errorClass: 'help-block',
+        errorPlacement: function(error, element) {
+            if(element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        }
+    });
+
+</script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class ="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">AcEs</a>
+
+        </div>
+         <p class="navbar-text navbar-right">Hi Student! <a href="MAINPAGE2.html" class="navbar-link"><span class="glyphicon glyphicon-log-out"></span></a></p>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 well">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="STUDENT_MAIN.html">Home</a></li>
+            <li class="active"><a href="STUDENT_EDITINFO.html">Basic Information</a></li>
+            <li><a href="STUDENT_CHNGPW.html">Change Password</a></li>
+			<li><a href="STUDENT_LEARNING.html">Learning Style</a></li>
+            <li><a href="STUDENT_GRADES.html">Grades</a></li>
+            <li><a href="STUDENT_SCHED.html">Schedule</a></li>
+          </ul>
+
+        </div>
+        <div class="col-md-5 col-md-offset-1 well">
+          <h3>Personal Information</h3>
+          <div class="form-group">
+              <label for="Nickname">Nickname</label>
+              <input type="text" class="form-control" id="Nickname" placeholder="Nickname" name="nickname">
+            </div>
+            <div class="form-group">
+             <label for="Contact">Mobile Number</label>
+             <input type="tel" class="form-control" id="Contact" placeholder="Contact Details" onkeypress='validate(event)' />
+          </div>
+
+            <div class="form-group"
+>             <label for="Email">Email</label>
+             <input type="email" class="form-control" id="Email" placeholder="Contact Details">
+          </div>
+
+            <div class="form-group">
+             <label for="Address">Address</label>
+             <input type="text" class="form-control" id="Address" placeholder="Address">
+          </div>
+
+          <div class="form-group">
+             <label for="HS">High School</label>
+             <input type="text" class="form-control" id="HS" placeholder="High School">
+          </div>
+
+          <div class="form-group">
+             <label for="Password">Password</label>
+             <input type="password" class="form-control" id="pw" placeholder="Password ">
+          </div>
+          <div class="form-group">
+          <a href = "STUDENT_MAIN.html"><button type="submit" class="btn btn-primary">Save</button></a>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

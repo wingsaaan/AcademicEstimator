@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add a Class</title>
+
+    <!-- Bootstrap -->
+    <link rel="icon" href="img/favicon.png" type="image" sizes="16x16">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse">
+      <div class ="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">AcEs</a>
+
+        </div>
+				<ul class= "nav navbar-nav">
+				<li><a href="PROF_MAIN.html">Home</a></li>
+            <li class="active"><a href="#">Add Classes</a></li>
+			<li><a href="PROF_MANAGE.html">Manage Classes</a></li>
+		  </ul>
+         <p class="navbar-text navbar-right">Hi Professor! <a href="MAINPAGE2.html" class="navbar-link"><span class="glyphicon glyphicon-log-out"></span></a></p>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 well" >
+          <h2>Add a class</h2>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="CourseCode">Course Code</label>
+              <input type="text" class="form-control" id="CourseCode" placeholder="Enter Course Code" required>
+            </div>
+            <div class="form-group col-md-6">
+             <label for="Section">Section</label>
+             <input type="text" class="form-control" id="Section" placeholder="S**">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="Class List">Upload Class List</label>
+            <input type="file" id="Class List">
+            <p class="help-block"><b>NOTE: Only Microsoft Excel (.xlsx) files are accepted!</b></p>
+			<hr>	
+          </div>
+
+          <div class="control-group"> 
+            <label for="day-option" class="control-label">Days</label>
+            <div class="controls row" id="day-option">
+              <div class="col-md-2">
+              <label class="checkbox inline" for="M">
+                <input type="checkbox" id="M" name="mon_available">Monday
+              </label>
+              </div>
+              <div class="col-md-2">
+              <label class="checkbox inline" for="T">
+                <input type="checkbox" id="T" name="mon_available">Tuesday
+              </label>
+            </div>
+            <div class="col-md-2">
+              <label class="checkbox inline" for="W">
+                <input type="checkbox" id="W" name="mon_available">Wednesday
+              </label>
+            </div>
+            <div class="col-md-2">
+              <label class="checkbox inline" for="H">
+                <input type="checkbox" id="H" name="mon_available">Thursday
+              </label>
+            </div>
+            <div class="col-md-2">
+              <label class="checkbox inline" for="F">
+                <input type="checkbox" id="F" name="mon_available">Friday
+              </label>
+            </div>
+            <div class="col-md-2">
+              <label class="checkbox inline" for="S">
+                <input type="checkbox" id="S" name="mon_available">Saturday
+              </label>  
+            </div>           
+          </div>
+
+           <label class="control-label">Class Time</label> 
+           <div class="row">
+            <div class="form-group">
+              <div class="col-md-6">
+              <input type="text" class="form-control required" id="From" placeholder="From">
+              </div>
+              <div class="col-md-6">
+             <input type="text" class="form-control required" id="To" placeholder="To">
+           </div>
+            </div>
+          </div>   
+
+           <div class="form-group">
+		   <hr>
+            <label for="Prereqs" class="control-label">Pre-requisites</label>
+            <textarea class="form-control" id = "Prereqs" rows="3" placeholder="Course Codes"></textarea>
+            <p class="help-block">Separate by break line  </p>
+          </div>
+
+          <a href = "PROF_MAIN.html"><button type="button" class="btn btn-primary">Add this class</button></a>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+  </body>
+</html>
